@@ -4,12 +4,12 @@ import { AnimatePresence } from 'framer-motion';
 
 import { MediaContextProvider } from '@/lib/helpers';
 import { globalStyles } from '@/lib/globalStyles';
-// import { AppHead } from '@/components';
+import { AppHead } from '@/components';
 
 const App = ({ Component, pageProps }: AppProps): JSX.Element => {
   return (
     <MediaContextProvider>
-      {/* <AppHead /> */}
+      <AppHead />
 
       <AnimatePresence exitBeforeEnter>
         <Component {...pageProps} />

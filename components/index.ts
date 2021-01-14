@@ -1,2 +1,3 @@
 /** Components */
-// export { default as Layout } from './Layout';
+export { default as AppHead } from './AppHead';
+export { default as Hero } from './Hero';

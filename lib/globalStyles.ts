@@ -170,4 +170,17 @@ export const globalStyles = css.global`
     font-weight: normal;
     font-style: normal;
   }
+
+  /*
+  * Custom classes
+  */
+
+  .container {
+    max-width: 90%;
+    margin: 0 auto;
+
+    @media (--large) {
+      max-width: 1200px;
+    }
+  }
 `;

@@ -1,5 +1,6 @@
-import React, { FC } from 'react';
+import React from 'react';
 import { GetStaticProps, NextPage } from 'next';
+import { HomeContainer } from '@/containers';
 
 import path from 'path';
 import fs from 'fs';
@@ -15,11 +16,7 @@ type HomeProps = {
 const Home: NextPage<HomeProps> = ({ translates }) => {
   const homeTranslates = _.find(translates, (t) => t.for === 'home');
 
-  return (
-    <div>
-      <h1>{homeTranslates.content.title}</h1>
-    </div>
-  );
+  return <HomeContainer translates={homeTranslates.content} />;
 };
 
 export const getStaticProps: GetStaticProps = async (context) => {

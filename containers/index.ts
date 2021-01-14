@@ -1,2 +1,2 @@
 /** Containers */
-// export { default as  } from './';
+export { default as HomeContainer } from './HomeContainer';

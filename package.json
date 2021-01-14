@@ -35,7 +35,6 @@
   },
   "dependencies": {
     "@artsy/fresnel": "^1.2.1",
-    "axios": "^0.21.0",
     "color-js": "^1.0.5",
     "cookie": "^0.4.1",
     "framer-motion": "^2.6.13",
@@ -45,7 +44,6 @@
     "postcss-flexbugs-fixes": "^4.2.1",
     "postcss-nested": "^4.2.3",
     "postcss-preset-env": "^6.7.0",
-    "prop-types": "^15.7.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "styled-jsx-plugin-postcss": "^3.0.0",

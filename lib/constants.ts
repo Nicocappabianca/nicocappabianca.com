@@ -2,7 +2,10 @@ import Color from 'color-js';
 
 export const Colors = {
   black: Color('#000000'),
-  white: Color('#ffffff')
+  white: Color('#ffffff'),
+  darkBlue: Color('#003366'),
+  lightBlue: Color('#0059B3'),
+  darkGray: Color('#2F2F2F')
 };
 
 export const Media = {

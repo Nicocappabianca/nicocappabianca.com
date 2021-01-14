@@ -6,14 +6,17 @@ export const globalStyles = css.global`
   :root {
     --black: ${Colors.black.toCSS()};
     --white: ${Colors.white.toCSS()};
+    --dark-gray: ${Colors.darkGray.toCSS()};
+    --dark-blue: ${Colors.darkBlue.toCSS()};
+    --light-blue: ${Colors.lightBlue.toCSS()};
 
     --retina-value: 3;
 
     /* Fonts */
-    /* century_gothic */
-    /* century_gothic_bold */
-    --f-century-gothic: 'century_gothic';
-    --f-century-gothic-bold: 'century_gothic_bold';
+    /* roboto */
+    /* roboto-condensed-bold */
+    --f-roboto: 'roboto';
+    --f-roboto-condensed-bold: 'roboto-condensed-bold';
 
     font-size: 16px;
 
@@ -65,9 +68,9 @@ export const globalStyles = css.global`
     scroll-behavior: smooth;
     text-rendering: optimizeSpeed;
     line-height: 1.5;
-    font-family: var(--f-century-gothic);
-    background-color: var(--white);
-    color: var(--black);
+    font-family: var(--f-roboto);
+    background-color: var(--dark-blue);
+    color: var(--white);
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -154,4 +157,17 @@ export const globalStyles = css.global`
   /*
   * Fonts
   */
+  @font-face {
+    font-family: 'roboto';
+    src: url('/fonts/Roboto-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'roboto-condensed-bold';
+    src: url('/fonts/RobotoCondensed-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
 `;

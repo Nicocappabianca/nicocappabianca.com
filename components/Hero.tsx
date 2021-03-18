@@ -1,5 +1,6 @@
 import React, { FC } from 'react';
 import { motion, Variants } from 'framer-motion';
+import Typical from 'react-typical';
 
 type HeroProps = {
   translates: any;
@@ -61,7 +62,9 @@ const Hero: FC<HeroProps> = ({ translates }) => {
           animate="visible"
           exit="exit">
           <h1>{translates.title}</h1>
-          <h2>{translates.subtitle}</h2>
+          <h2>
+            <Typical steps={translates.subtitles} loop={Infinity} wrapper="span" />
+          </h2>
         </motion.div>
       </div>
 
@@ -84,7 +87,6 @@ const Hero: FC<HeroProps> = ({ translates }) => {
               height: 200px;
               border-radius: 50%;
               object-fit: cover;
-              border: 2px solid var(--light-blue);
 
               @media (--large) {
                 width: 250px;
@@ -104,7 +106,7 @@ const Hero: FC<HeroProps> = ({ translates }) => {
               h1 {
                 text-align: center;
                 font-size: 28px;
-                font-family: var(--roboto-condensed-bold);
+                font-family: 'roboto';
 
                 @media (--large) {
                   font-size: 56px;
@@ -114,31 +116,26 @@ const Hero: FC<HeroProps> = ({ translates }) => {
 
               h2 {
                 text-align: center;
-                font-size: 24px;
-                padding-top: 15px;
+                font-size: 20px;
+                font-family: 'ubuntu-mono';
+                font-weight: 400;
+                padding-top: 5px;
                 position: relative;
 
                 @media (--large) {
-                  font-size: 32px;
+                  font-size: 28px;
                   padding-top: 20px;
                   text-align: left;
                 }
 
                 &:before {
-                  content: '';
-                  position: absolute;
-                  background-color: var(--light-blue);
-                  width: 80px;
-                  height: 3px;
-                  border-radius: 4px;
-                  top: 7px;
-                  left: 0px;
-                  right: 0px;
-                  margin: 0 auto;
-
                   @media (--large) {
+                    content: '';
+                    position: absolute;
+                    background-color: var(--white);
+                    opacity: 0.5;
+                    height: 1px;
                     width: 120px;
-                    height: 4px;
                     border-radius: 10px;
                     top: 3px;
                     left: 0px;

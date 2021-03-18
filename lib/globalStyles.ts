@@ -13,10 +13,9 @@ export const globalStyles = css.global`
     --retina-value: 3;
 
     /* Fonts */
-    /* roboto */
-    /* roboto-condensed-bold */
     --f-roboto: 'roboto';
     --f-roboto-condensed-bold: 'roboto-condensed-bold';
+    --f-ubuntu-mono: 'ubuntu-mono';
 
     font-size: 16px;
 
@@ -69,7 +68,8 @@ export const globalStyles = css.global`
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     font-family: var(--f-roboto);
-    background-color: var(--dark-blue);
+    background: rgb(58, 118, 180);
+    background: linear-gradient(90deg, rgba(58, 118, 180, 1) 0%, rgba(69, 252, 192, 1) 100%);
     color: var(--white);
 
     -webkit-font-smoothing: antialiased;
@@ -167,6 +167,13 @@ export const globalStyles = css.global`
   @font-face {
     font-family: 'roboto-condensed-bold';
     src: url('/fonts/RobotoCondensed-Bold.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'ubuntu-mono';
+    src: url('/fonts/UbuntuMono-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
   }

@@ -176,10 +176,26 @@ export const globalStyles = css.global`
   */
 
   .container {
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
 
+    @media (--small) {
+      max-width: 540px;
+    }
+
+    @media (--medium) {
+      max-width: 720px;
+    }
+
     @media (--large) {
+      max-width: 960px;
+    }
+
+    @media (--extraLarge) {
+      max-width: 1140px;
+    }
+
+    @media (--extraExtraLarge) {
       max-width: 1200px;
     }
   }

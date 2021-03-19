@@ -8,8 +8,8 @@ type HomeContainerProps = {
 const HomeContainer: FC<HomeContainerProps> = ({ translates }) => {
   return (
     <section className="home">
-      <Social />
       <Hero translates={translates} />
+      <Social />
 
       <style jsx>
         {`

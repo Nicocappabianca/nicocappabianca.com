@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { Hero } from '@/components';
+import { Hero, Social } from '@/components';
 
 type HomeContainerProps = {
   translates: any;
@@ -8,6 +8,7 @@ type HomeContainerProps = {
 const HomeContainer: FC<HomeContainerProps> = ({ translates }) => {
   return (
     <section className="home">
+      <Social />
       <Hero translates={translates} />
 
       <style jsx>

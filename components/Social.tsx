@@ -10,7 +10,8 @@ const Social: FC = () => {
         className="social__link"
         href="https://www.linkedin.com/in/nicolascappabianca/"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+        title="Linkedin">
         <SVG src="/icons/social/linkedin.svg" />
       </motion.a>
       <motion.a
@@ -18,7 +19,8 @@ const Social: FC = () => {
         className="social__link"
         href="https://github.com/Nicocappabianca"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+        title="GitHub">
         <SVG src="/icons/social/github.svg" />
       </motion.a>
       <motion.a
@@ -26,7 +28,8 @@ const Social: FC = () => {
         className="social__link"
         href="https://t.me/nicolas_cappabianca"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+        title="Telegram">
         <SVG src="/icons/social/telegram.svg" />
       </motion.a>
       <motion.a
@@ -34,7 +37,8 @@ const Social: FC = () => {
         className="social__link"
         href="mailto:nicolas.cappabianca@gmail.com"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+        title="Email">
         <SVG src="/icons/social/email.svg" />
       </motion.a>
 

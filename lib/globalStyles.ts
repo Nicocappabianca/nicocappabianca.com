@@ -68,8 +68,7 @@ export const globalStyles = css.global`
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     font-family: var(--f-roboto);
-    background: rgb(58, 118, 180);
-    background: linear-gradient(90deg, rgba(58, 118, 180, 1) 0%, rgba(69, 252, 192, 1) 100%);
+    background-image: linear-gradient(113.3deg, rgba(217, 9, 27, 1) 6.9%, rgba(22, 68, 150, 1) 75%);
     color: var(--white);
 
     -webkit-font-smoothing: antialiased;

@@ -48,14 +48,10 @@ const Social: FC = () => {
             width: 170px;
             display: flex;
             justify-content: space-between;
-            margin: 40px auto 0 auto;
-
-            @media (--large) {
-              position: fixed;
-              right: 15px;
-              top: 15px;
-              margin: 0px;
-            }
+            position: fixed;
+            right: 15px;
+            top: 15px;
+            z-index: 2;
 
             :global(&__link) {
               :global(svg) {

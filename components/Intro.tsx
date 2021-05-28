@@ -2,11 +2,11 @@ import React, { FC } from 'react';
 import { motion, Variants } from 'framer-motion';
 import Typical from 'react-typical';
 
-type HeroProps = {
+type IntroProps = {
   translates: any;
 };
 
-const Hero: FC<HeroProps> = ({ translates }) => {
+const Intro: FC<IntroProps> = ({ translates }) => {
   const imageVariants: Variants = {
     initial: {
       opacity: 0,
@@ -44,8 +44,8 @@ const Hero: FC<HeroProps> = ({ translates }) => {
   };
 
   return (
-    <section className="hero">
-      <div className="container">
+    <section className="intro">
+      <div className="intro__container">
         <motion.img
           className="me_image"
           src="/images/me.jpg"
@@ -70,8 +70,11 @@ const Hero: FC<HeroProps> = ({ translates }) => {
 
       <style jsx>
         {`
-          .hero {
-            .container {
+          .intro {
+            height: 100vh;
+
+            &__container {
+              height: 100%;
               display: flex;
               justify-content: center;
               align-items: center;
@@ -151,4 +154,4 @@ const Hero: FC<HeroProps> = ({ translates }) => {
   );
 };
 
-export default Hero;
+export default Intro;

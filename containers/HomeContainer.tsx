@@ -1,11 +1,12 @@
-import React, { FC, useRef } from 'react';
+import React, { FC, useRef, useState } from 'react';
 import { Intro, Social } from '@/components';
 import { motion, Transition } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import Swipercore, { Navigation } from 'swiper';
+import Swipercore, { Navigation, Mousewheel, Keyboard, Pagination } from 'swiper';
 import 'swiper/swiper.min.css';
+import 'swiper/components/pagination/pagination.min.css';
 
-Swipercore.use([Navigation]);
+Swipercore.use([Navigation, Mousewheel, Keyboard, Pagination]);
 
 type HomeContainerProps = {
   translates: any;
@@ -13,6 +14,7 @@ type HomeContainerProps = {
 
 const HomeContainer: FC<HomeContainerProps> = ({ translates }) => {
   const nextButton = useRef(null);
+  const [showArrow, setShowArrow] = useState<boolean>(true);
 
   const arrowTransition: Transition = {
     yoyo: Infinity,
@@ -21,18 +23,24 @@ const HomeContainer: FC<HomeContainerProps> = ({ translates }) => {
 
   return (
     <section className="home">
-      <motion.img
-        animate={{ y: 10 }}
-        transition={arrowTransition}
-        className="home__arrow-down"
-        src="/icons/arrow.svg"
-        alt="Arrow down"
-        ref={nextButton}
-        role="button"
-      />
+      {showArrow && (
+        <motion.img
+          animate={{ y: 10 }}
+          transition={arrowTransition}
+          className="home__arrow-down"
+          src="/icons/arrow.svg"
+          alt="Arrow down"
+          ref={nextButton}
+          role="button"
+        />
+      )}
       <Social />
       <Swiper
         direction="vertical"
+        mousewheel={true}
+        onSlideChange={() => setShowArrow(false)}
+        keyboard={{ enabled: true }}
+        pagination={{ clickable: true }}
         onInit={(swiper) => {
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment
           // @ts-ignore
@@ -47,8 +55,32 @@ const HomeContainer: FC<HomeContainerProps> = ({ translates }) => {
       <style jsx>
         {`
           .home {
-            height: calc(100vh - 50px);
+            height: 100vh;
             overflow: hidden;
+
+            :global(.swiper-pagination) {
+              right: 10px;
+              position: absolute;
+              top: 45vh;
+
+              @media (--large) {
+                right: 20px;
+              }
+            }
+
+            :global(.swiper-pagination-bullet) {
+              width: 0.3rem;
+              height: 0.3rem;
+
+              @media (--large) {
+                width: 0.5rem;
+                height: 0.5rem;
+              }
+            }
+
+            :global(.swiper-pagination-bullet-active) {
+              background: #e1e1dd;
+            }
 
             :global(.swiper-button-disabled) {
               display: none;

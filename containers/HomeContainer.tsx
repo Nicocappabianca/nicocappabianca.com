@@ -51,12 +51,6 @@ const HomeContainer: FC<HomeContainerProps> = ({ translates }) => {
         <SwiperSlide>
           <Intro translates={translates} />
         </SwiperSlide>
-        <SwiperSlide>
-          <Intro translates={translates} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <Intro translates={translates} />
-        </SwiperSlide>
       </Swiper>
 
       <style jsx>

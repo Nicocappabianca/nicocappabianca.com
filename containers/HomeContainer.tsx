@@ -36,6 +36,7 @@ const HomeContainer: FC<HomeContainerProps> = ({ translates }) => {
       )}
       <Social />
       <Swiper
+        speed={500}
         direction="vertical"
         mousewheel={true}
         onSlideChange={() => setShowArrow(false)}
@@ -47,6 +48,12 @@ const HomeContainer: FC<HomeContainerProps> = ({ translates }) => {
           // eslint-disable-next-line no-param-reassign
           swiper.params.navigation.nextEl = nextButton.current;
         }}>
+        <SwiperSlide>
+          <Intro translates={translates} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <Intro translates={translates} />
+        </SwiperSlide>
         <SwiperSlide>
           <Intro translates={translates} />
         </SwiperSlide>
